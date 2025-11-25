@@ -188,8 +188,8 @@ if uploaded_file is not None:
         # Ideallinie (y=x)
         # Wir nehmen min/max von beiden Achsen für eine schöne Diagonale
         lims = [
-            np.min([ax.get_xlim(), ax.get_ylim()]),  # min of both axes
-            np.max([ax.get_xlim(), ax.get_ylim()]),  # max of both axes
+            np.min([ax[0].get_xlim(), ax[0].get_ylim()]),  # min of both axes
+            np.max([ax[0].get_xlim(), ax[0].get_ylim()]),  # max of both axes
         ]
         ax[0].plot(lims, lims, ls = "-", color = "gray", alpha=0.75, label=f'Ideallinie; Lin CCC: {linCCC(x, y):.4f}')
         
